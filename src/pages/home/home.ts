@@ -5,7 +5,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
 
 @Component({
   selector: 'page-home',
-  providers: [Camera],
+  providers: [Camera, NativeStorage],
   templateUrl: 'home.html'
 })
 export class HomePage {
@@ -34,7 +34,7 @@ export class HomePage {
   takePicture() {
     this.camera.getPicture({
       quality: 75,
-      destinationType: 1,
+      destinationType: this.camera.DestinationType.FILE_URI,
       sourceType: this.camera.PictureSourceType.CAMERA,
       allowEdit: true,
       encodingType: this.camera.EncodingType.JPEG,
