@@ -1,14 +1,30 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Manage your photos!
     </ion-title>
+
+    <ion-buttons end>
+      <button (click)="takePicture()" class="custom-icon">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+  <!-- The world is your oyster.
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    If you get lost, the
+    <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p> -->
+  <div *ngIf="base64Image.length==0">
+    <br>
+    <br> &nbsp; &nbsp; Click on the camera icon to take pictures!</div>
+  <!-- <ion-slides pager autoplay=2000 pager="true" paginationClickable="true" spaceBetween=30 centeredSlides="true" *ngIf="base64Image.length > 0">
+    <ion-slide *ngFor="let image of base64Image">
+      <img [src]="image" />
+
+    </ion-slide>
+  </ion-slides> -->
 </ion-content>
