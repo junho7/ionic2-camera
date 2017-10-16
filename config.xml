@@ -84,4 +84,5 @@
     <engine name="ios" spec="~4.4.0" />
     <engine name="android" spec="~6.2.3" />
     <allow-navigation href="http://192.168.0.12:8100" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="^5.2.0" />
 </widget>
