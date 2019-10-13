@@ -38,8 +38,8 @@ export class HomePage {
       sourceType: this.camera.PictureSourceType.CAMERA,
       allowEdit: true,
       encodingType: this.camera.EncodingType.JPEG,
-      targetWidth: 300,
-      targetHeight: 300,
+      targetWidth: 2048,
+      targetHeight: 1152,
       saveToPhotoAlbum: false
     }).then((imageUri) => {
       console.log("imageUri is " + imageUri);
